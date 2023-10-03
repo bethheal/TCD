@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src="home.js" defer></script>
+    <link rel="stylesheet" href="https://scroll-driven-animations.style/css/styles.css">
+    <title>TDC</title>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#home" onclick="scrollToSection('home')">Home</a>
+        <a href="#about" onclick="scrollToSection('about')">About</a>
+        <a href="#offers" onclick="scrollToSection('offers')">Offers</a>
+        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+        <div class="animation"></div>
+    </nav>
+
+    <div class="container">
+        <div id="home" class="card" data-aos="fade-up">
+            <img src="assets/home.png">
+        </div>
+
+        <div id="about" class="card" data-aos="fade-up">
+            <img  src="assets/about.png">
+
+        </div>
+
+        <div id="offers" class="card" data-aos="fade-up">
+            <img  src="assets/offers.png">
+
+        </div>
+
+        <div id="contact" class="card" data-aos="fade-up">
+            <img  src="assets/contact.png">
+
+        </div>
+    </div>
+    <a href="#top" class="top" aria-label="Back to top" title="Back to top">↑</a>
+    
+</body>
+</html>
