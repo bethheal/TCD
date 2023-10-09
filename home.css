@@ -175,41 +175,128 @@ span {
     margin: 0 auto; /* Center the image horizontally */
 }
 
-    /* Media query for responsiveness */
 @media (max-width: 768px) {
+    /* Media query for responsiveness */
     nav {
         flex-direction: column; /* Stack links vertically on smaller screens */
         text-align: center; /* Center text in the vertical direction */
+        height: auto;
     }
 
     nav a {
         padding: 10px 0; /* Adjust padding for spacing between links vertically */
     }
 
+    /* Make images fit the mobile screen */
+    .home-mob-img,
+    .about-mob-img,
+    .offers-mob-img,
+    .contact-mob-img {
+        display: block;
+        width: 100%; /* Set the width to 100% to make images responsive */
+        height: auto; /* Allow the height to adjust proportionally */
+    }
 
-/* Add this CSS to your existing home.css file */
+    /* Show/hide elements as needed for each section */
+    .home-desk-img,
+    .about-desk-img,
+    .offers-desk-img,
+    .contact-desk-img {
+        display: none;
+    }
 
-.home img,
-.about img,
-.offers img,
-.contact img {
-    max-width: 100%; /* Ensure images don't exceed the screen width */
-    height: auto; /* Maintain aspect ratio while scaling */
-    display: block; /* Remove extra space below images */
-    margin: 0 auto; /* Center the images horizontally */
+    /* Show/hide text as needed for each section */
+    .about-mob-txt,
+    .contact-mob-txt {
+        display: block;
+        width: 100%; /* Set the width to 100% to make images responsive */
+        height: auto; /* Allow the height to adjust proportionally */
+    }
+
+    .about-desk-txt,
+    .contact-desk-txt {
+        display: none; /* Hide text when hiding the image on desktop */
+    }
+    /* Style for the "Add to Cart" buttons */
+
+
+    .button1 {
+        position: absolute;
+        top: -270px;
+        left: 90px;
+    }
+
+    .button2 {
+        position: absolute;
+        top: -270px;
+        left: 300px;
+    }
+
+    .button3{
+        position: absolute;
+        top: -270px;
+        right: 87px;
+    }
+   
+    .card button {
+        border: none;
+        outline: 10px;
+        padding: 4px;
+        color: #191919;
+        background-color: #d9d4d8;
+        text-align: center;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
 }
 
-.card {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically on mobile */
-    align-items: center; /* Center buttons horizontally on mobile */
-    padding: 20px; /* Adjust padding for buttons on mobile */
-}
+    
+/* DESKTOP IMAGE DISPLAY */
+@media (min-width: 769px) {
+/* home display */
+    .home-desk-img {
+        display: block;
 
-.button1,
-.button2,
-.button3 {
-    position: static; /* Reset button positioning on mobile */
-    margin-bottom: 10px; /* Add spacing between buttons on mobile */
-}
+    }
+    .home-mob-img {
+        display: none;
+    }
+
+    /* about display */
+
+    .about-desk-img {
+        display: block;
+
+    }
+    .about-mob-txt{
+        display: none;
+    }
+    
+    .about-mob-img {
+        display: none;
+    }
+    /* offers display */
+    .offers-mob-img{
+        display: none;
+    }
+    .offers-desk-img {
+        display: block;
+    }
+
+    /* OFFERS DISPLAY */
+    .contact-desk-img {
+        display: block;
+
+    }
+    .contact-mob-txt{
+        display: none;
+    }
+    
+    .contact-mob-img {
+        display: none;
+    }
+
+
 }
